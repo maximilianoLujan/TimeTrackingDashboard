@@ -12,12 +12,16 @@ h1 {
   text-align: center;
 }
 
-/* ********* Realizando la seccion del perfil **********   */
-.profile {
-  width: 80%;
+section {
   height: 20rem;
+  width: 80%;
   margin: auto;
   border-radius: 47px;
+  margin-bottom: 3rem;
+}
+
+/* ********* Realizando la seccion del perfil **********   */
+.profile {
   position: relative;
 }
 
@@ -42,6 +46,9 @@ h1 {
   width: 100%;
   margin: auto;
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .info-image img {
@@ -52,6 +59,16 @@ h1 {
 .info-name {
   height: 100%;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .profile-date {
@@ -59,6 +76,151 @@ h1 {
   height: 100%;
   border-radius: 47px;
   background-color: #24234C;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.image-container {
+  margin: auto;
+  width: 60%;
+  height: 50%;
+}
+
+.image-container img {
+  border: 3px #fdfdfd solid;
+  border-radius: 50%;
+}
+
+.name-report {
+  color: #A291FA;
+  font-size: 20px;
+  margin-bottom: .5rem;
+}
+
+.name-name {
+  color: #B3A5F0;
+  font-size: 24px;
+  margin-top: .5rem;
+}
+
+.date-day, .date-week, .date-month {
   position: absolute;
+  bottom: 1.5rem;
+  color: #60619E;
+  font-size: 20px;
+}
+
+.date-day, .date-week, .date-month:hover {
+  cursor: pointer;
+}
+
+.date-day {
+  left: 2rem;
+}
+
+.date-week {
+  left: 40%;
+}
+
+.date-month {
+  right: 2rem;
+}
+
+/* ******  Realizando la tarjeta work  ****** */
+.work {
+  position: relative;
+}
+
+.work-container {
+  width: 100%;
+  height: 100%;
+  background-color: #F88766;
+  border-radius: 47px;
+  position: relative;
+}
+
+.imagework-container {
+  position: absolute;
+  right: 1.5rem;
+}
+
+.info-work {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  bottom: -2px;
+  background-color: #24234C;
+  border-radius: 47px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.work-info {
+  font-size: 24px;
+  color: #B8BCCA;
+  margin-bottom: 1rem;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.work-time {
+  font-size: 28px;
+  color: #B8BCCA;
+  margin-top: 0;
+  margin: auto;
+  margin-top: 0;
+}
+
+.info-past {
+  color: #B8BCCA;
+  font-size: 16px;
+  margin: 0;
+}
+
+.info-work-container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.info-work-container2 div {
+  width: 2rem;
+  height: 0.5rem;
+  background-image: url("../Icons/icon-ellipsis.svg");
+  background-repeat: no-repeat;
+}
+
+.info-work-container2 {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.info-work-container2 div:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */
