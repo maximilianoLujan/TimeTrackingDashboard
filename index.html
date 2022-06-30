@@ -9,51 +9,77 @@
 </head>
 <body>
     <header>
-        <h1>Time Tracking Dashboard</h1>
-    </header>
-    <main>
-        <section id="profileroute" class="profile">
-                <div class="profile-info">
-                    <div class="info-image">
-                        <div class="image-container">
-                            <img src="Images/image-jeremy.png" alt="">
-                        </div>
-                    </div>
-                    <div class="info-name">
-                        <p class="name-report">Report from</p>
-                        <p class="name-name">Jeremy Robson</p>
-                    </div>
-                </div>
-                <div class="profile-date">
-                    <p class="date-day">Daily</p>
-                    <p class="date-week">Weekly</p>
-                    <p class="date-month">Monthly</p>
-                </div>
-        </section>
-        <section id="work" class="work">
-            <div class="work-container">
-                <div class="imagework-container">
-                    <img src="Icons/icon-work.svg" alt="">
-                </div>
-                <div class="info-work">
-                    <div class="info-work-container">
-                        <p class="work-info">Work</p>
-                        <p class="work-time">32hrs</p>
-                    </div>
-                    <div class="info-work-container2">
-                        <div></div>
-                        <p class="info-past">Last Week - 36hrs</p>
-                    </div>
-
-                </div>
+        <div class="contenedor-perfil">
+            <div class="perfil-img">
+                <img src="Images/image-jeremy.png" alt="">
             </div>
-        </section>
-        <section>
-
-        </section>
-        <section>
-
-        </section>
-    </main>
+            <div class="perfil-txt">
+                <p>Report For</p>
+                <p>Jeremy Robson</p>
+            </div>
+        </div>
+        <div class="contenedor-date">
+            <p class="selected">Daily</p>
+            <p>Weekly</p>
+            <p>Monthly</p>
+        </div>
+    </header>
+    <section>
+        <div class="contenedor-actividad trabajo">
+            <img src="Icons/icon-work.svg" alt="work">
+        </div>
+        <div class="contenedor-horas">
+            <div class="horas">
+                <p>Work</p>
+                <p>8 HRS</p>
+            </div>
+            <div class="lastweek">
+                <p>Last Week - 36hrs</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="contenedor-actividad estudio">
+            <img src="Icons/icon-study.svg" alt="estudio">
+        </div>
+        <div class="contenedor-horas">
+            <div class="horas">
+                    <p>Estudio</p>
+                    <p>3HRS</p>
+            </div>
+            <div class="lastweek">
+                <p>Last Week - 36hrs</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="contenedor-actividad ejercicio">
+            <img id="imagen-e" src="Icons/icon-exercise.svg" alt="ejercicio">
+        </div>
+        <div class="contenedor-horas">
+            <div class="horas">
+                <p>Ejercicio</p>
+                <p>2 HRS</p>
+            </div>
+            <div class="lastweek">
+                <p>Last Week - 36hrs</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="contenedor-actividad entretenimiento">
+            <img src="Icons/icon-play.svg" alt="entretenimiento">
+        </div>
+        <div class="contenedor-horas">
+            <div class="horas">
+                <p>entretenimiento</p>
+                <p>5HRS</p>
+            </div>
+            <div class="lastweek">
+                <p>Last Week - 36hrs</p>
+            </div>
+        </div>
+    </section>
+    <button class="boton">Comprobar Jornada</button>
 </body>
 </html>

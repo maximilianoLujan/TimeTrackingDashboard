@@ -1,187 +1,197 @@
 @import "_variables.scss";
-
+@import "_mixes.scss";
 body{
-    width: 100%;
-    height: 100%;
-    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
     background-color: $color-fondo;
-    box-sizing: border-box;
+    scroll-behavior: smooth;
+    box-sizing:border-box;
+    display: flex;
+    flex-direction: column;
 }
-h1{
-    color: $color-letra1;
-    text-align: center;
-}
-section{
-    height: 20rem;
+
+
+
+
+
+
+
+/**********Codigo del header**********/
+header{
     width: 80%;
-    margin: auto;
+    height: 20rem;
     border-radius: $radio;
-    margin-bottom: 3rem;
-}
-
-
-
-
-
-
-
-
-
-
-/* ********* Realizando la seccion del perfil **********   */
-.profile{
+    margin: 2rem auto;
     position: relative;
-}
-.profile-info{
-    width: 100%;
-    height: 70%;
-    border-radius: $radio;
     background-color: $color-profile;
-    position: absolute;
-    z-index: 999;
+}
+.contenedor-perfil{
+    height: 13rem;
+    @include propiedad-header;
+    background-color: $color-profile;
     display: flex;
     flex-direction: row;
 }
-.info-image{
-    height: 100%;
-    width:  100%;
-    margin: auto;
-    border-radius: 50%;
+.perfil-img{
+    width: 40%;
+    height: 90%;
     display: flex;
 }
-.info-image img{
-    width: 100%;
-    height: 100%;
+.perfil-img img{
+    width: 80%;
+    height: 80%;
+    margin: auto;
 }
-.info-name{
+.perfil-txt{
+    width: 60%;
     height: 100%;
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
 }
-.profile-date{
-    width: 100%;
-    height: 100%;
-    border-radius: $radio;
-    background-color: $color-primario;
-    position: relative;
-    display: flex;
+.perfil-txt p{
+    margin: .5rem;
 }
-.image-container{
-    margin: auto;
-    width: 60%;
-    height: 50%;
-}
-.image-container img{
-    border: 3px rgb(253, 253, 253) solid;
-    border-radius: 50%;
-}
-.name-report{
+.perfil-txt p:nth-of-type(1){
     color: $color-letra4;
     font-size: 20px;
-    margin-bottom: .5rem;
 }
-.name-name{
+.perfil-txt p:nth-of-type(2){
     color: $color-letra2;
-    font-size: 24px;
-    margin-top: .5rem;
+    font-size: 30px;
 }
-.date-day,.date-week,.date-month{
-    position: absolute;
-    bottom: 1.5rem;
-    color: $color-letra1;
-    font-size: 20px;
-}
-.date-day,.date-week,.date-month:hover{
-    cursor: pointer;
-}
-.date-day{
-    left: 2rem;
-}
-.date-week{
-    left: 40%;
-}
-.date-month{
-    right: 2rem;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ******  Realizando la tarjeta work  ****** */
-.work{
-    position: relative;
-}
-.work-container{
-    width: 100%;
-    height: 100%;
-    background-color: $color-work;
-    border-radius: $radio;
-    position: relative;
-}
-.imagework-container{
-    position: absolute;
-    right: 1.5rem;
-}
-.info-work{
-    position: absolute;
-    width: 100%;
-    height: 80%;
-    bottom: -2px;
+.contenedor-date{
+    height: 7rem;
     background-color: $color-primario;
-    border-radius: $radio;
+    bottom: 0;
+    @include propiedad-header;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.work-info{
-    font-size: 24px;
-    color: $color-letra3;
-    margin-bottom: 1rem;
+.contenedor-date p{
+    color: $color-letra1;
+    font-size: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+.contenedor-actividad{
+    width: 100%;
+}
+.selected{
+    color: white !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************Codigo de las secciones*****************/
+section{
+    width: 80%;
+    height: 18rem;
+    margin: 1rem auto;
+    border-radius: $radio;
+}
+section p{
+    color: $color-letrasp
+}
+.contenedor-actividad{
+    @include propiedad-header;
+    height: 5rem;
+    position: relative
+}
+.contenedor-actividad img{
+    position: absolute;
+    right: 1.5rem;
+}
+.contenedor-horas{
+    @include propiedad-header;
+    height: 13rem;
+    background-color: $color-primario;
+    border-radius: 40px;
+    display: flex;
+}
+section:nth-of-type(1){
+    background-color: $color-trabajo;
+}
+section:nth-of-type(2){
+    background-color: $color-estudio;
+}
+section:nth-of-type(3){
+    background-color: $color-ejercicio;
+}
+#imagen-e{
+    transform: rotate(-144deg);
+}
+section:nth-of-type(4){
+    background-color: $color-entretenimiento;
+}
+.horas{
+    width: 50%;
+    height: 80%;
     margin: auto;
-    margin-bottom: 10px;
-}
-.work-time{
-    font-size: 28px;
-    color: $color-letra3;
-    margin-top: 0;
-    margin: auto;
-    
-    margin-top: 0;
-}
-.info-past{
-    color: $color-letra3;
-    font-size: 16px;
-    margin: 0;
-}
-.info-work-container{
-    height: 100%;
     display: flex;
     flex-direction: column;
-}
-.info-work-container2 div{
-    width: 2rem;
-    height: 0.5rem;
-    background-image: url("../Icons/icon-ellipsis.svg");
-    background-repeat: no-repeat;
-}
-.info-work-container2{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: space-evenly;
-    align-items: flex-end;
 }
-.info-work-container2 div:hover{
+.lastweek{
+    width: 50%;
+    height: 100%;
+    display: flex;
+}
+.lastweek p{
+    margin: auto;
+}
+.horas p{
+    margin: .5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**********Codigo del boton**********/
+.boton{
+    width: 80%;
+    margin: 1.5rem auto 1.5rem auto;
+    height: 3rem;
+    background-color: $color-profile;
+    border-radius: $radio;
+    color: white;
+    font-size: large;
+    transition: all 1s ease;
+    border: none;
+}
+.boton:hover{
     cursor: pointer;
+    font-size: xx-large;
+    height: 4rem;
 }
