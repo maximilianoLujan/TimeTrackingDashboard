@@ -1,3 +1,4 @@
+import comprobarJornada from "./Funcionalidades/comprobar.js";
 import cambiarJornada from "./Funcionalidades/jornada.js";
 const d =document, 
     w = window,
@@ -5,4 +6,5 @@ const d =document,
 
     d.addEventListener("DOMContentLoaded",e=>{
         cambiarJornada("daily","weekly","monthly");
+        comprobarJornada();
     })
